@@ -9,6 +9,7 @@
   --color-subtitle: #c75c6f;
   --color-title: #292930;
   --color-bg-services: #f8f8f8;
+  --color-bg-proyect: #ecf2f6
 }
 /*ESTILOS GENERALES*/
 html{
@@ -361,10 +362,9 @@ body{
 
 .layout__services{
     position: relative;
-    margin: 5rem 4rem;
+    margin: 14rem 10rem;
+    margin-bottom: 8rem;
     z-index: 1;
-
-
 }
 .services__grid{
     max-width: 1200px;/*es de 1320px*/
@@ -374,13 +374,16 @@ body{
     margin-bottom: 2rem;
     text-align: left;
 }
-.services__subtitle{
+/* reutilizamos los elementos para diferentes variables de la web*/
+.services__subtitle,
+.projects__subtitle{
     font-size: 2rem;
     font-weight: 500;
     margin-bottom: 1.5rem;
     color: var(--color-subtitle);
 }
-.services__title{
+.services__title,
+.projects__title{
     font-size: 6.7rem; 
     font-weight: 500;
     line-height: 1.2;     
@@ -473,3 +476,120 @@ body{
 .services__service--top{
     margin-top: 0rem;
 }
+/* fondo de services*/
+
+.service-shapes__item{
+    position: absolute;
+    z-index: -1;
+    paint-order: none;
+}
+.service-shapes--shape1{
+    top: -7%;
+    right: 4%;
+}
+.service-shapes--shape2{
+    top: 10%;
+    left: 52%;
+}
+.service-shapes--shape3{
+    top:34%;
+    left:5%;
+}
+
+/*PROYECTOS*/
+.layout__projects{
+    position: relative;
+    z-index: 1;
+    background-color: var(--color-bg-proyect);
+    padding: 14rem 10rem;
+}
+.projects__grid{
+    max-width: 1200px;/* es 1320px*/
+    margin: 0 auto;
+}
+.projects__header{
+    margin-bottom: 4rem;
+}
+.projects__subtitle{
+    text-transform: capitalize;
+}
+.projects__categories{
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+    margin-bottom: 5.5rem;
+}
+.categories__item{
+    position: relative;
+    font-size: 2rem;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 0.8rem 0;
+    transition: all 150ms ease-in-out;
+}
+.categories__item--active,
+.categories__item:hover{
+    border-bottom:3px solid var(--color-primary);
+}
+.projects__all{
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    gap: 4rem 7rem;
+}
+.project__container-img{
+    width: 100%;
+    border-radius: 30px 30px 0 0;
+    overflow: hidden;
+}
+.project__img{
+    width:100%; /*530px para laptop*/
+    transition: all 800ms ease-in-out;
+}
+.projects__project:hover .project__img{
+    transform: scale(1.2);
+}
+.project__content{
+    background-color: var(--color-secondary);
+    padding: 4rem 5rem;
+    border-radius: 0 0 30px 30px;
+}
+.project__title{
+    color: var(--color-title);
+    margin-bottom: 1rem;
+    font-size: 3.2rem;
+    line-height: 1.2;
+    font-weight: 500;
+    transition: all 300ms ease-in-out;
+}
+.project__title:hover{
+    color: var(--color-banner);
+}
+.project__tag{
+    font-size: 1.7rem;
+}
+/* fondo de services*/
+
+.project-shapes__item{
+    position: absolute;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.project-shapes--shape1{
+    right: 12%;
+    top:2%;
+}
+
+.project-shapes--shape2{
+    right: 14%;
+    top: 8%;
+}
+
+.project-shapes--shape3{
+    left: 5%;
+    top: 35%;
+}
+
+/*ESTADISTICAS*/
+
