@@ -13,6 +13,7 @@
   --color-bg-dark: #27272e;
   --color-text-description: #99a1aa;
   --color-hover-dar:#303035;
+  --color-border: #e3e6e9;
 }
 /*ESTILOS GENERALES*/
 html{
@@ -382,7 +383,8 @@ body{
 .projects__subtitle,
 .stats__subtitle,
 .reviews__subtitle,
-.clients__subtitle{
+.clients__subtitle,
+.news__subtitle{
     font-size: 2rem;
     font-weight: 500;
     margin-bottom: 1.5rem;
@@ -391,7 +393,8 @@ body{
 .services__title,
 .projects__title,
 .stats__title,
-.reviews__title{
+.reviews__title,
+.news__title{
     font-size: 6.7rem; 
     font-weight: 500;
     line-height: 1.2;     
@@ -685,9 +688,10 @@ body{
     text-align: left;
     margin-bottom: 6rem;
 }
-.reviews__description{
+/* reutilizamos selectores de NOTICIA*/
+.reviews__description,
+.news__description{
     margin: 3rem 0;
-    font-weight: 500;
     width: 50%;
     font-size: 2.4rem;
 }
@@ -792,4 +796,204 @@ body{
     z-index: -1;
     top:10rem;
     right: 0;
+}
+
+/* NOTICIAS */
+
+.layout__news{
+    position: relative;
+    z-index: 1;
+    padding: 14rem 0;
+}
+.news__container{
+    max-width: 1200px; /*1320px*/
+    margin: 0 auto;
+}
+.news__header{
+    text-align: center;
+    margin-bottom: 6rem;
+}
+.news__title{
+    margin-bottom: 3rem;
+}
+.news__description{
+    text-align: center;
+    margin: 0 auto;
+}
+.news__list{
+    display: flex;
+}
+.news__new{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    padding-right: 2rem;
+    padding-left: 0;
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+    transition: all 300ms ease-in-out;
+}
+.news__new:hover{
+    border-top-color:var(--color-primary) ;
+}
+.news__new:last-child{
+    border-left: 1px solid var(--color-border);
+    padding-left: 2.5rem;
+}
+.new__container-img{
+    overflow: hidden;
+    border-radius: 3rem;
+}
+.new__img{
+    border-radius: 3rem;
+    transition: all 300ms ease-in-out;
+}
+.news__new:hover .new__img{/*para que haga un efecto en la img y no sobre salga de la caja o la img*/
+    transform: scale(1.1);
+}
+.new__content{/* con flex:1 hacemos que se igualem los espacios con la img y espacios de las letras description*/
+    flex: 1;
+}
+.new__title{
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.4;
+    color: var(--color-title);
+    margin-bottom: 2rem;
+    transition: all 300ms ease-in-out;
+}
+.new__title:hover,
+.new__more:hover{
+    color: var(--color-primary);
+}
+.new__description{
+    font-size: 1.7rem;
+    color: var(--color-text-description);
+    margin-bottom: 3rem;
+    font-weight: normal;
+}
+.new__more{
+    font-weight: 600;
+    color: var(--color-hover-dar);
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.7rem;
+    transition: all 300ms ease-in-out;
+}
+.new__icon{
+    font-size: 1.3rem;
+    vertical-align: middle;
+}
+/*fondo de noticias*/
+.new-shapes__item{
+    position: absolute;
+    z-index: -1;
+}
+.new-shapes--shape1{
+    top:14rem;
+    left: 31.5rem;
+}
+.new-shapes--shape2{
+    top: 12rem;
+    right: 0;
+}
+.new-shapes--shape3{
+    bottom: 8rem;
+    left: 0;
+}
+.new-shapes--shape4{
+    bottom: 6rem;
+    right: 16rem;
+}
+
+/* CONTACTO */
+
+.layout__contact{
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    padding: 0 ;
+    padding-top: 14rem;
+    padding-bottom: 10rem;
+}
+.layout__contact::before{ /* para darle los dos colores al fondo de contacto*/
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 65rem;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--color-primary);
+    z-index: -1;
+}
+.contact__container{
+    max-width: 1200px;/*1320px*/
+    margin: 0 auto;
+    overflow: hidden;
+}
+.contact__header{
+    margin-bottom: 6.5rem;
+    text-align: center;
+}
+.contact__subtitle{
+    color: var(--color-bg-btn);
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+    font-size: 2rem;
+}
+.contact__title{
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 5.5rem;
+    font-size: 6.4rem;
+    line-height: 1.2;
+    font-weight: 500;
+    color: var(--color-secondary);
+}
+.contact__btn{
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    padding: 2.3rem 5.5rem ;
+    background-color: var(--color-secondary);
+    border-radius: 20px;
+    font-weight: 700;
+    text-align: center;
+    transition: all 300ms ease-in-out;
+}
+.contact__btn:hover{
+    background-color: var(--color-bg-btn);
+}
+
+/* imagenes y fondes de seccion contacto*/
+
+.contact__imagenes{
+    position: relative;
+    text-align: center;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.contact__thumb{
+    display: inline-block;
+    position: relative;
+}
+
+.contact__thumb--chat{/*posisiconamos la img con margenes por que en la caja padre usamos display inline block*/
+    margin-right: -18rem;
+    margin-bottom: -0.8rem;
+}
+.contact__thumb--laptop{
+    position: absolute;/* posicionamos la img con bottom lef por que en la caja padre usamos position relative y en su misma caja position absolute*/
+    bottom: 0;
+    left: 16rem;
+}
+.contact__thumb--mobile{
+    position: absolute;
+    bottom: 0;
+    right: 8rem;
 }
