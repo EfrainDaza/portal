@@ -9,7 +9,10 @@
   --color-subtitle: #c75c6f;
   --color-title: #292930;
   --color-bg-services: #f8f8f8;
-  --color-bg-proyect: #ecf2f6
+  --color-bg-proyect: #ecf2f6;
+  --color-bg-dark: #27272e;
+  --color-text-description: #99a1aa;
+  --color-hover-dar:#303035;
 }
 /*ESTILOS GENERALES*/
 html{
@@ -376,14 +379,19 @@ body{
 }
 /* reutilizamos los elementos para diferentes variables de la web*/
 .services__subtitle,
-.projects__subtitle{
+.projects__subtitle,
+.stats__subtitle,
+.reviews__subtitle,
+.clients__subtitle{
     font-size: 2rem;
     font-weight: 500;
     margin-bottom: 1.5rem;
     color: var(--color-subtitle);
 }
 .services__title,
-.projects__title{
+.projects__title,
+.stats__title,
+.reviews__title{
     font-size: 6.7rem; 
     font-weight: 500;
     line-height: 1.2;     
@@ -592,4 +600,196 @@ body{
 }
 
 /*ESTADISTICAS*/
+/* reutilizamos variables con selectores de CLIENTES*/
+.layout__stats,
+.layout__clients{ 
+    background-color: var(--color-bg-dark);
+    padding: 14rem 10rem;
+}
+.stats__container,
+.clients__container{
+    max-width: 1320px; /*1320px*/
+    margin: 0 auto;
+}
+.stats__header{
+    text-align: center;
+}
+/* reutilizamos selector con CLIENTES*/
+.stats__title,
+.clients__title{
+    font-size: 6.4rem;
+    color: var(--color-secondary);
+    margin-bottom: 3rem;
+}
+.stats__description,
+.clients__description{
+    font-size: 2rem;
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+    color: var(--color-text-description);
+}
+.stats__progress{
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+}
 
+.stats__stat{
+    width: 25%;
+    text-align: center;
+    padding: 7rem 2rem;
+    border-radius: 2rem;
+}
+.stats__stat:hover{
+    background:linear-gradient(180deg,var(--color-bg-dark),var(--color-hover-dar));
+    border: 1px solid var(--color-hover-dar);
+}
+.stat__icon{
+    margin-bottom: 2rem;
+}
+.stat__icon>img{/*para centrar la img de la caja*/
+    margin: 0 auto;
+    text-align: center;
+}
+.stat__count{/* le ponemos display, por que la etiqueta span no recibe margin*/
+    display: inline-block;
+    font-size: 6rem;
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--color-primary);
+    margin-bottom: 0.8rem;
+    text-align: center;
+}
+.stat__title{
+    text-align: center;
+    color: var(--color-secondary);
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+/*RESEÑAS*/
+
+.layout__reviews{
+    position: relative;
+    z-index: 1;
+    padding-top: 14rem;
+    padding-bottom: 11rem;
+}
+.reviews__grid{
+    max-width: 1200px; /*1320px*/
+    margin: 0 auto;
+}
+.reviews__header{
+    text-align: left;
+    margin-bottom: 6rem;
+}
+.reviews__description{
+    margin: 3rem 0;
+    font-weight: 500;
+    width: 50%;
+    font-size: 2.4rem;
+}
+.reviews__container{
+    display: flex;
+    gap: 3rem;
+}
+.reviews__review{
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+}
+.review__company{
+    display: inline-block;
+    margin-bottom: 3rem;
+}
+.review__description{
+    font-size: 2.4rem;
+    line-height: 1.2;
+    color: var(--color-text-body);
+    margin-bottom: 4rem;
+}
+.review__author{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+}
+.author__container-img{
+    border-radius: 3.5rem;
+    overflow: hidden;
+}
+.author__content{
+    flex:1
+}
+.author__name{
+    display: block;
+    font-weight: bold;
+    font-size: 1.7rem;
+    color: var(--color-bg-dark);
+    margin-bottom: 0.3rem;
+}
+.author__description{
+    display: block;
+    font-size: 1.5rem;
+    color: var(--color-text-description);
+    opacity: 0.7;
+}
+.review-shapes__item{
+    position: absolute;
+    z-index: -1;
+    pointer-events: none;
+    top: 16%;
+    right: 26%;
+}
+
+/*CLIENTES*/
+.layout__clients{
+    position: relative;
+    z-index: 1;
+    padding-bottom: 12rem;
+}
+
+.clients__header{
+    text-align: left;
+}
+.clients__title{
+    width: 50%;
+    line-height: 1.2;
+    font-weight: 500;
+}
+.clients__description{
+    text-align: left;
+    width: 40%;
+    margin: 0;
+    margin-bottom: 6rem;
+}
+
+.clients__logos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+.clients__item{
+    width: calc(25% - 3rem);/*restamos los 3 rem que le pusimos a la caja padre*/ 
+}
+.clients__img{
+    filter: grayscale(100%);/*blanco y negro*/
+    opacity: 0.3;
+    transition: all 300ms ease-in-out;
+}
+.clients__item:hover > .clients__img{
+    filter: grayscale(0);
+    opacity: 1;
+    cursor: pointer;
+}
+
+/*fondo de clientes*/
+
+.client-shapes__item{
+    position: absolute;
+    z-index: -1;
+    top:10rem;
+    right: 0;
+}
