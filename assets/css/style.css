@@ -14,6 +14,8 @@
   --color-text-description: #99a1aa;
   --color-hover-dar:#303035;
   --color-border: #e3e6e9;
+  
+  --max-width:1320px;
 }
 /*ESTILOS GENERALES*/
 html{
@@ -35,7 +37,7 @@ body{
 
 .layout{
     width: 100%;
-   min-width: 1200px; /*en la maquetacion original es de 1600px*/
+    min-width: 1200px; 
     height: 100%;
 }
 
@@ -198,7 +200,7 @@ body{
 }
 .banner__title{
     color: var(--color-secondary);
-    font-size: 7rem;/*es de 8rem*/
+    font-size: 8rem;
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 3rem;
@@ -371,7 +373,7 @@ body{
     z-index: 1;
 }
 .services__grid{
-    max-width: 1200px;/*es de 1320px*/
+    max-width: var(--max-width);
     margin: 0 auto;
 }
 .services__header{
@@ -515,7 +517,7 @@ body{
     padding: 14rem 10rem;
 }
 .projects__grid{
-    max-width: 1200px;/* es 1320px*/
+    max-width:var(--max-width);
     margin: 0 auto;
 }
 .projects__header{
@@ -547,6 +549,9 @@ body{
     flex-direction: row;
     flex-wrap:wrap;
     gap: 4rem 7rem;
+}
+.projects__project{
+    width: calc(50% - 3.5rem);/*a medida que se achica ocuap el 50% del ancohe y se le descuenta el gap*/
 }
 .project__container-img{
     width: 100%;
@@ -611,7 +616,7 @@ body{
 }
 .stats__container,
 .clients__container{
-    max-width: 1320px; /*1320px*/
+    max-width: var(--max-width);
     margin: 0 auto;
 }
 .stats__header{
@@ -681,7 +686,7 @@ body{
     padding-bottom: 11rem;
 }
 .reviews__grid{
-    max-width: 1200px; /*1320px*/
+    max-width: var(--max-width);
     margin: 0 auto;
 }
 .reviews__header{
@@ -806,7 +811,7 @@ body{
     padding: 14rem 0;
 }
 .news__container{
-    max-width: 1200px; /*1320px*/
+    max-width: var(--max-width);
     margin: 0 auto;
 }
 .news__header{
@@ -930,7 +935,7 @@ body{
     z-index: -1;
 }
 .contact__container{
-    max-width: 1200px;/*1320px*/
+    max-width: var(--max-width);
     margin: 0 auto;
     overflow: hidden;
 }
@@ -1051,7 +1056,7 @@ body{
     padding-top: 1rem;
 }
 .footer__container{
-    max-width: 1200px; /*1320px*/
+    max-width: var(--max-width);
     margin: 0 auto;
 }
 .footer__top{
