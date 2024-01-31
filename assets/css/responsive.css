@@ -100,8 +100,13 @@
     .layout{
         min-width: auto;
     }
+    /*oculatamos menu navbar*/
     .navbar__nav{
         display: none;
+    }
+    /* mostramos menu responsive*/
+    .navbar__mobile-btn{
+        display: block;
     }
     .layout__banner{
         min-height: 100%;
@@ -217,7 +222,7 @@
         padding-bottom: 4rem;
     }
     .layout__contact::before{
-        height: 60rem;
+        height: 55rem;
     }
     .contact__title{
         width: 100%;
@@ -368,12 +373,12 @@
         padding-bottom: 4rem;
     }
     .layout__contact::before{
-        height: 48rem;
+        height: 45rem;
     }
     .contact__thumb--chat{
-        margin-right: -60rem;
+        margin-right: -44rem;
         margin-bottom: -0.8rem;
-        width: 100%;
+        width: 90%;
     }
     .contact__thumb--laptop{
         bottom: 0;
@@ -391,5 +396,52 @@
         padding-right: 0rem;
         margin-right: 0rem;
         margin-bottom: 8rem;
+    }
+}
+
+@media(max-width:640px){
+    .layout__projects,
+    .stats__container,
+    .contact__container,
+    .reviews__grid,
+    .clients__container,
+    .news__container,
+    .footer__container{
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+    .layout__services{
+        margin-left: 3rem;
+        margin-right: 1rem;
+    }
+
+    .projects__categories {
+        gap: 3rem;
+    }
+    
+    
+    .contact__thumb--chat{
+        margin-right: -25rem;
+        margin-bottom: -0.8rem;
+    }
+    .contact__thumb--laptop{
+        bottom: 0;
+        left: 0rem;
+    }
+    .contact__thumb--mobile{
+        bottom: 0;
+        right: -18rem;
+    }
+    .contact__img{
+        width: 35%;
+    }
+    .footer__widget{
+        flex-basis:auto ;
+    }
+    .footer__fright{
+        display: flex;
+        flex-direction: row;
+        flex-basis: 100%;
+        gap: 4rem;
     }
 }
