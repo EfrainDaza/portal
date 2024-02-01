@@ -6,6 +6,7 @@
     <!-- hojas de estilos-->
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/dark.css">
     <!--hoja de responsive-->
     <link rel="stylesheet" href="./assets/css/responsive.css">
     <!-- hojas de fuentes-->
@@ -14,7 +15,22 @@
 
     <title>Agencia de Desarrollo | Daza Efrain</title>
 </head>
-<body>
+<body> 
+    <!--BOTON MODO OSUCRO-->
+
+    <div class="switcher">
+        <button class="switcher__btn">
+
+            <span class="switcher__icon-light">
+                <i class="fa-solid fa-moon switcher__icon"></i>
+            </span>
+
+            <span class="switcher__icon-dark">
+                <i class="fa-solid fa-lightbulb switcher__icon"></i>
+            </span>
+        </button>
+    </div>
+
     <!--MENU RESPONSIVE-->
     <div class="menu-mobile">
         <header class="menu-mobile__header">
@@ -1049,5 +1065,6 @@
     </div>
     <!--javascript para menu-mobile-->
     <script src="./assets/js/menu-mobile.js"></script>
+    <script src="./assets/js/navbar-fixed.js"></script>
 </body>
 </html>
