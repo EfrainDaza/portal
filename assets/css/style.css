@@ -19,7 +19,8 @@
 }
 /*ESTILOS GENERALES*/
 html{
-    font-size: 10px;
+    /*font-size: 10px; */
+    font-size: 62.5%; /* es equivalente a 10px, usamos en porcentaje para que el usuario pueda configurar el tamaño de funete mediante el google crome*/
     overflow-x: hidden;
 }
 body{
@@ -1314,7 +1315,10 @@ body{
 .menu-mobile__container-logo{
     width: 15rem;
 }
-
+/* logo de modo nocturno*/
+.navbar__logo-dark{
+    display: none;
+}
 .menu-mobile__close{
     background-color:transparent ;
     width: 3rem;

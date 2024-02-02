@@ -12,13 +12,28 @@
     --color-bg-proyect: #292930;
     --color-bg-dark: #27272E; 
     --color-text-description: #99a1aa;
-    --color-hover-dar:#303035;
+    --color-hover-dar: #FFDC60;
     --color-border: #393940;
     
     --max-width:1320px;
 }
 body{
     background-color: #212121;
+}
+.nav__title:hover{
+    color: var(--color-secondary);
+}
+.nav__title::before{
+    background-color: var(--color-secondary);
+}
+.submenu__title:hover{
+    color: var(--color-secondary);
+}
+.submenu__title::after{
+    background-color: var(--color-secondary);
+}
+.nav__submenu{
+    background-color: var(--color-banner);
 }
 .banner__btn{
     background-color: var(--color-primary);
@@ -28,16 +43,28 @@ body{
     background-color: var(--color-banner);
 }
 
+.services__service{
+    background: var(--color-banner);
+    background-color: var(--color-banner);
+}
+
 .project__content{
     background-color: var(--color-banner);
+}
+.project__title:hover{
+    color: var(--color-hover-dar);
 }
 
 .layout__contact::before{
     background-color: var(--color-banner);
 }
 
+.new__more{
+    color: var(--color-text-body);
+}
+
 .contact__subtitle{
-    color: #FFDC60;
+    color: var(--color-hover-dar);
 }
 .contact__btn{
     background-color: var(--color-primary);
@@ -49,4 +76,32 @@ body{
 }
 .fleft__form-control{
     background-color:#27272E;
+}
+
+.widget__link:hover,
+.flinks__title:hover,
+.copyright__text a:hover{
+
+    color: var(--color-hover-dar);
+}
+/* logo modo nocturno*/
+.navbar__logo-dark{
+    display: block;
+}
+/* logo modo normal*/
+.navbar__logo-ligh{
+    display: none;
+}
+/* menu responsive*/
+.mobile-btn__line {
+    background-color: var(--color-banner);
+}
+.menu-mobile__link {
+    color: var(--color-banner);
+}
+.submenu-mobile__link {
+    color: var(--color-banner);
+}
+.menu-mobile__close {
+    color: var(--color-banner);
 }
